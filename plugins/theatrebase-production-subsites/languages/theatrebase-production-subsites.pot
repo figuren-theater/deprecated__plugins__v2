@@ -1,0 +1,171 @@
+# Copyright (C) 2022 Carsten Bach
+# This file is distributed under the same license as the TheatreBase Production Subsites plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: TheatreBase Production Subsites 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/theatrebase-production-subsites\n"
+"Last-Translator: Carsten Bach <mail@carsten-bach.de>\n"
+"Language-Team: figuren.theater <info@figuren.theater>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-02T20:02:56+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: theatrebase-production-subsites\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-SearchPath-0: .\n"
+
+#. Plugin Name of the plugin
+msgid "TheatreBase Production Subsites"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://figuren.theater/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Enables the 'production-subsite' PT, which can be added to parent 'production' PT posts."
+msgstr ""
+
+#. Author of the plugin
+msgid "Carsten Bach"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://carsten-bach.de"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:254
+msgid "Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:255
+msgid "Subsites"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:333
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:357
+msgid "Production-Subsites"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:334
+msgid "Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:335
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:1086
+msgid "All Production-Subsites"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:336
+msgid "Production-Subsite Archives"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:337
+msgid "Production-Subsite Attributes"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:338
+msgid "Insert into Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:339
+msgid "Uploaded to this Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:340
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:371
+msgctxt "tb_prod_subsite"
+msgid "Image"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:341
+msgctxt "tb_prod_subsite"
+msgid "Set image"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:342
+msgctxt "tb_prod_subsite"
+msgid "Remove image"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:343
+msgctxt "tb_prod_subsite"
+msgid "Use as image"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:344
+msgid "Filter Production-Subsites list"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:345
+msgid "Production-Subsites list navigation"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:346
+msgid "Production-Subsites list"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:347
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:978
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:979
+msgid "New Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:348
+msgid "Add New"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:349
+msgid "Add New Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:350
+msgid "Edit Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:351
+msgid "View Production-Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:352
+msgid "View Production-Subsites"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:353
+msgid "Search Production-Subsites"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:354
+msgid "No Production-Subsites found"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:355
+msgid "No Production-Subsites found in trash"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:356
+msgid "Production:"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:374
+msgid "Subsite Title"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:1064
+msgid "Production Subsite"
+msgstr ""
+
+#: inc/Network/Post_Types/Post_Type__tb_prod_subsite.php:1085
+msgid "Show All Production-Subsites"
+msgstr ""
+
+#: theatrebase-production-subsites.php:72
+#: theatrebase-production-subsites.php:82
+msgctxt "Template Title"
+msgid "Blank"
+msgstr ""

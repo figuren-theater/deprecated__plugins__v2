@@ -1,0 +1,47 @@
+<?php
+namespace Figuren_Theater\Coresites\Shortcodes;
+
+/**
+ * Define the Shortcodes used by this plugin
+ *
+ *
+ * @link       https://carsten-bach.de
+ * @since      1.0.0
+ *
+ * @package    Ft_coresites
+ * @subpackage Ft_coresites/includes
+ */
+
+/**
+ * Define the Shortcodes used by this plugin
+ *
+ * @since      1.0.0
+ * @package    Ft_coresites
+ * @subpackage Ft_coresites/includes
+ * @author     Carsten Bach <mail+theatre_base@carsten-bach.de>
+ */
+class Ft_coresites_Shortcode__DUMMY extends Ft_coresites_Shortcodes {
+
+	/**
+	 * 'ui_field' is the needed field of "Shortcake - Shortcode UI" Plugin
+	 * docs are available inside dev Plugin
+	 * https://github.com/wp-shortcake/Shortcake/blob/master/dev.php
+	 */
+	protected function default_atts() {
+		//
+		return array();
+	}
+
+
+
+	protected function prepare_output() {
+
+		$this->output = 'hallo ft welt';
+	}
+
+
+#	protected function render( $atts ) {
+#		return $this->output;
+#	}
+
+} // Ft_coresites_Shortcode__featurelist

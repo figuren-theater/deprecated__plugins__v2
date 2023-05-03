@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "figurentheater/ft-themesapi-block-downloaded",
+	"version": "0.1.0",
+	"title": "f.t | Themes API Downloaded Block",
+	"category": "text",
+	"icon": "download",
+	"description": "Show the wordpress.org download count for the given theme, loaded from post_meta.",
+	"attributes": {
+		"textAlign": {
+			"type": "string"
+		},
+		"level": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"supports": {
+		"align": true,
+		"color": {
+			"gradients": true,
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"margin": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": true,
+		"html": false,
+		"reusable": false
+	},
+	"textdomain": "{{textdomain}}",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+	"usesContext": [ "postType", "postId" ]
+}

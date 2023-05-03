@@ -1,0 +1,23 @@
+{
+	"name": "image-source-control-isc-block",
+	"version": "0.1.0",
+	"description": "Show the Image-Sources managed via 'Image Source Control'.",
+	"author": "Carsten Bach",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://websites.fuer.figuren.theater",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"i18n:pot": " wp i18n make-pot . --exclude=node_modules",
+		"i18n:json": "wp i18n make-json languages --pretty-print --no-purge '--use-map={ \"src/index.js\": \"build/index.js\", \"src/save.js\": \"build/index.js\", \"src/edit.js\": \"build/index.js\", \"src/block.json\": \"build/block.json\" }'"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^23.1.0"
+	}
+}

@@ -1,0 +1,8 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.dcf-table-striped tbody tr:nth-of-type(2n) {
+	background-color: rgba(0,0,0,0.075);
+}

@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "figurentheater/ft-themesapi-block-ratings",
+	"version": "0.1.0",
+	"title": "Themes API Ratings",
+	"category": "text",
+	"icon": "star-half",
+	"description": "Show the wordpress.org ratings for the given theme, loaded from post_meta.",
+	"attributes": {
+		"textAlign": {
+			"type": "string"
+		},
+		"level": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"supports": {
+		"align": true,
+		"color": {
+			"gradients": true,
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"margin": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"multiple": true,
+		"html": false,
+		"reusable": false
+	},
+	"textdomain": "ft-themesapi-block-ratings",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css",
+	"usesContext": [ "postType", "postId" ]
+}

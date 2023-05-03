@@ -1,0 +1,56 @@
+# Copyright (C) 2022 Carsten Bach
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Source Control Lite | Block 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/image-source-control-isc-block\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-05-26T12:14:10+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: image-source-control-isc-block\n"
+
+#. Plugin Name of the plugin
+msgid "Image Source Control Lite | Block"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://websites.fuer.figuren.theater"
+msgstr ""
+
+#. Description of the plugin
+msgid "Show the Image-Sources managed via 'Image Source Control' using a block."
+msgstr ""
+
+#. Author of the plugin
+msgid "Carsten Bach"
+msgstr ""
+
+#: image-source-control-isc-block.php:147
+msgid "Add some images to the post, to see their sources listed here."
+msgstr ""
+
+#: build/index.js:1
+#: src/index.js:43
+#: build/block.json
+#: src/block.json
+msgctxt "block title"
+msgid "Image Sources"
+msgstr ""
+
+#: build/index.js:1
+#: src/index.js:44
+#: build/block.json
+#: src/block.json
+msgctxt "block description"
+msgid "Show the Image-Sources managed via 'Image Source Control'."
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:77
+msgid "Show sources of the whole website."
+msgstr ""

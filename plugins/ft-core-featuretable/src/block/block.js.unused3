@@ -1,0 +1,294 @@
+/**
+ * BLOCK: core-featuretable
+ *
+ * Registering a basic block with Gutenberg.
+ * Simple block, renders and saves the same content without any interactivity.
+ */
+
+//  Import CSS.
+//  importing thoose over here,
+//  trigger the css-pre-processor to jump in, on save
+import './editor.scss';
+import './style.scss';
+
+const {registerBlockType} = wp.blocks; //Blocks API
+const {createElement,Fragment,useState} = wp.element; //React.createElement
+const {__} = wp.i18n; //translation functions
+const {useBlockProps,InspectorControls} = wp.blockEditor; //Block inspector wrapper
+const ServerSideRender = wp.serverSideRender; //WordPress server-side renderer
+const {Disabled, SelectControl, Panel, PanelBody, PanelRow} = wp.components; //
+const { withSelect, select, useSelect  } = wp.data;
+
+/*
+export default withSelect( select => {
+  const { getEntityRecords } = select( 'core ')
+  // return getEntityRecords('taxonomy', 'category' )
+  return { categories: getEntityRecords('taxonomy', 'category' ) }
+
+})(MyComponent)*/
+
+
+/*
+export default withSelect( select => {
+  const { getEntityRecords } = select( 'core ')
+  // return getEntityRecords('taxonomy', 'category' )
+  return { options: getEntityRecords('taxonomy', 'category' ) }
+
+})(taxTermSelect)*/
+
+
+/**
+ * Register: aa Gutenberg Block.
+ *
+ * Registers a new block provided a unique name and an object defining its
+ * behavior. Once registered, the block is made editor as an option to any
+ * editor interface where blocks are implemented.
+ *
+ * @link https://wordpress.org/gutenberg/handbook/block-api/
+ * @param  {string}   name     Block name.
+ * @param  {Object}   settings Block settings.
+ * @return {?WPBlock}          The block, if it has been successfully
+ *                             registered; otherwise `undefined`.
+ */
+registerBlockType( 'ft/block-core-featuretable', {
+	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
+	title: __( 'core-featuretable' ), // Block title.
+	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	keywords: [
+		__( 'core-featuretable' ),
+		__( 'CGB Example' ),
+		__( 'create-guten-block' ),
+	],
+
+	attributes: {
+		availableTerms: {
+			type: 'object',
+		},
+		taxonomy: {
+			type: 'string',
+			default: 'category'
+		},
+		term: {
+			type: 'string',
+//			default: 'design'
+		},
+	},
+/*
+	edit: withSelect( ( select ) => {
+
+		const { availableTerms } = select( 'core ').getEntityRecords('taxonomy', 'category' )
+	    return {
+	        availableTerms
+	    };
+	})(( { availableTerms, attributes, className } ) => {
+
+*/
+/*	edit: ( { attributes, className } ) => {
+	    // Pull out the props we'll use
+//	    const { attributes, className, isSelected, setAttributes } = props
+
+		const { termUpdater } = withSelect(select => {
+
+			const { getEntityRecords } = select( 'core ')
+		    return {
+		        availableTerms: getEntityRecords('taxonomy', 'category' )
+		    };
+		} )( attributes )*/
+
+	edit : ( { attributes, className, setAttributes } ) => {
+
+
+
+		const MyComponent = () => {
+		/*
+		    const categories = useSelect(select =>
+		        select('core').getEntityRecords('taxonomy', 'category')
+		    );*/
+/*		    const categories = withSelect( select => {
+			  const { getEntityRecords } = select( 'core ')
+			  // return getEntityRecords('taxonomy', 'category' )
+			  return getEntityRecords('taxonomy', 'category' )
+			})*/
+
+
+		const { categories } = withSelect(select => {
+
+			const { getEntityRecords } = select( 'core ')
+		    return {
+		        availableTerms: getEntityRecords('taxonomy', 'category' )
+		    };
+		} )( setAttributes )
+
+/*			const categories = [
+				{
+					id: 1,
+					name: 'cat 1'
+				},
+				{
+					id: 2,
+					name: 'cat 2'
+				},
+			]*/
+		    const [categories_selected, setCategoriesSelected] = useState([]);
+
+
+console.log( categories )
+console.log( attributes.availableTerms )
+console.log( categories )
+console.log( attributes.availableTerms )
+
+
+		if ( ! categories ) {
+			return (
+				<p>{ __( 'Loading...', 'wholesomecode' ) }</p>
+			);
+		}
+
+		if (0 === categories.length) {
+			return <p>{__('No Categories found ... please add some!')}</p>;
+		}
+
+
+		    return (
+		    	<Fragment>
+		    		<InspectorControls key="inspector">
+		    			<PanelBody
+		    			   title="Tax & Term 2"
+		    			   initialOpen="true"
+		    			>
+					        <SelectControl
+					            multiple
+					            label={__('Cat')}
+					            options={ categories.map(({id, name}) => ({label: name, value: id}))}
+					            onChange={(selected) => {
+					                // I haven't tested this code so I'm not sure what onChange returns.
+					                // But assuming it returns an array of selected values:
+					                setCategoriesSelected(selected)
+					            }}
+					            value={categories_selected}
+					        />
+
+		    			</PanelBody>
+		    		</InspectorControls>
+		    	</Fragment>
+		    );
+		};
+
+		const MyRendering = () => {
+
+			return (
+				<Disabled>
+					<ServerSideRender
+					   block="ft/block-core-featuretable"
+					   attributes={attributes}
+					/>
+				</Disabled>
+		/*	    createElement( Disabled, {},
+			    	createElement( serverSideRender, {
+						block: 'ft/block-core-featuretable',
+						attributes: atts,
+					} )
+				)*/
+			)
+		}
+
+
+
+/*
+		if ( ! availableTerms ) {
+			return (
+				<p>{ __( 'Loading...', 'wholesomecode' ) }</p>
+			);
+		}
+*/
+
+
+/**
+ * Note that the first time it is called,
+ * it may return an empty result,
+ * since it needs to fetch the data from the REST API.
+ * You can subscribe to changes in state by either using withSelect or subscribe.
+ */
+
+/*		return (
+			<MyComponent />
+		)*/
+
+
+
+/*	    const rendering = createElement( Disabled, {},
+	    	createElement( serverSideRender, {
+				block: 'ft/block-core-featuretable',
+				attributes: attributes,
+			} )
+		)
+*/
+		return (
+			<div>
+				<MyComponent />
+				<MyRendering />
+			</div>
+		)
+
+/*
+		if (!attributes.availableTerms) {
+			return <p className={className}>
+				{__('Loading Categories ...')}
+			</p>;
+		}
+		if (0 === attributes.availableTerms.length) {
+			return <p>{__('No Categories found ... please add some!')}</p>;
+		}
+const taxTermSelect = createElement( SelectControl,
+									{
+										label: 'Select Term',
+										 // options : availableTerms,
+										 options : availableTerms.map(({id, name}) => ({label: name, value: id})),
+										onChange: ( value ) => {
+											setAttributes( { term: value } );
+										},
+										value: attributes.term
+									}
+								)
+
+
+
+		const taxTermPicker = createElement( Fragment, {},
+									createElement( InspectorControls, { key: 'inspector' },
+										createElement( PanelBody, { title: 'Tax & Term', initialOpen: true },
+
+											taxTermSelect,
+
+										),
+
+									),
+								)
+
+	    return [
+	    	// termUpdater,
+	    	taxTermPicker,
+	    	rendering,
+	    ]
+*/
+
+	// } ), // with withSelect
+	}, //
+
+
+	/**
+	 * The save function defines the way in which the different attributes should be combined
+	 * into the final markup, which is then serialized by Gutenberg into post_content.
+	 *
+	 * The "save" property must be specified and must be a valid function.
+	 *
+	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
+	 *
+	 * @param {Object} props Props.
+	 * @returns {Mixed} JSX Frontend HTML.
+	 */
+	// We're going to be rendering in PHP, so save() can just return null.
+	save: function() {
+		return null;
+	},
+} );
