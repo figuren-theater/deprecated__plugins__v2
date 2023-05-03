@@ -1,0 +1,23 @@
+{
+	"name": "figuren-theater/BLOG_template",
+	"description": "File & Folder structure for smooth integration into the figuren.theater WordPress Multisite network ",
+    "homepage": "https://websites.fuer.figuren.theater",
+    "type": "wordpress-dropin",
+    "keywords": ["wordpress", "wordpress-dropin"],
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "figuren.theater",
+            "email": "info@figuren.theater"
+        },
+        {
+            "name": "Carsten Bach",
+            "email": "mail@carsten-bach.de",
+            "homepage": "https://carsten-bach.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "koodimonni/composer-dropin-installer": "^1.4"
+    }
+}

@@ -1,0 +1,41 @@
+<?php 
+
+namespace EXAMPLE_Figuren_Theater_WEBSITE;
+
+use Figuren_Theater;
+use function Figuren_Theater\get_config;
+
+use function add_action;
+
+/**
+ * 
+ */
+add_action( 'phpmailer_init', __NAMESPACE__ . '\\load_smtp_credentials', 100 );
+
+
+function load_smtp_credentials( $phpmailer ) {
+
+	$config = Figuren_Theater\get_config()['modules']['security'];
+	if ( ! $config['smtp'] )
+		return; // early
+	
+	// most of the stuff should be fine 
+	// with the already set up defaults
+	// 
+	// $phpmailer->isSMTP();     
+	// $phpmailer->SMTPAuth   = true; 
+	// 
+	// Additional settings…
+	// Choose 'ssl' for SMTPS on port 465, or 'tls' for SMTP+STARTTLS on port 25 or 587
+	// $phpmailer->SMTPSecure = ( 465 === getenv('FT_SMTP_PORT') ) ? 'ssl' : 'tls'; 
+	// $phpmailer->FromName   = get_bloginfo( 'name' );
+	
+
+	// JUST CHANGE THE CREDENTIALS
+	// 
+	// $phpmailer->Host       = ''; // default: getenv('FT_SMTP_HOST');
+	// $phpmailer->Port       = ''; // default: getenv('FT_SMTP_PORT');
+	// $phpmailer->Username   = ''; // default: getenv('FT_SMTP_USER');
+	// $phpmailer->From       = ''; // default: getenv('FT_SMTP_USER');
+	// $phpmailer->Password   = ''; // default: getenv('FT_SMTP_PASSWORD');
+}
