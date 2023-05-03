@@ -1,6 +1,6 @@
 {
-	"name": "figuren-theater/BLOG_template",
-	"description": "File & Folder structure for smooth integration into the figuren.theater WordPress Multisite network ",
+	"name": "figuren-theater/deprecated__plugins__v2",
+	"description": "DEPRECATED Files & Folder structures for Plugins used by the figuren.theater WordPress Multisite network ",
     "homepage": "https://websites.fuer.figuren.theater",
     "type": "wordpress-dropin",
     "keywords": ["wordpress", "wordpress-dropin"],
