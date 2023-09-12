@@ -1,6 +1,8 @@
 <?php
 namespace Figuren_Theater\Coresites\Shortcodes;
 
+use Figuren_Theater;
+
 /**
  * Define the Shortcodes used by this plugin
  *
@@ -153,10 +155,10 @@ $p_link = $p_title;
 			if (\has_excerpt( $feature->ID )) {
 				$f_excerpt = \get_the_excerpt( $feature->ID );
 				$f_data = '
-							<details> 
-								<summary>'.$f_link.'</summary> 
-								<p>'.$f_excerpt.'</p> 
-							</details> 
+							<details>
+								<summary>'.$f_link.'</summary>
+								<p>'.$f_excerpt.'</p>
+							</details>
 				';
 			} else {
 				$f_data = $f_link;
@@ -170,7 +172,7 @@ $p_link = $p_title;
 				$ms_ = $ms_obj_list[0];
 
 				// actually released
-				if (\version_compare($ms_->name, FT_PLATTFORM_VERSION, '<=')) {
+				if (\version_compare($ms_->name, Figuren_Theater\get_platform_version(), '<=')) {
 					$ms_title 		= $ms_->name;
 					$ms_title_attr 	= \sprintf(__('Show all Features of milestone \'%s\'.','ft_SALES'),$ms_title);
 					$ms_url 		= \get_term_link( $ms_ );
