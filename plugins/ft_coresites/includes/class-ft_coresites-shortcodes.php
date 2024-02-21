@@ -73,6 +73,9 @@ class Ft_coresites_Shortcodes {
 	 */
 	protected $required_css_and_js;
 
+	protected $output;
+
+
 	/**
 	 * Initialize the class and set its properties.
 	 *
